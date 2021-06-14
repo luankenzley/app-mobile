@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Lista de Categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <IonList *ngFor="let categoria of categorias" >
+    <IonItem>
+      <IonLabel>{{categoria.nome}}</IonLabel>
+
+    </IonItem>
+    <IonItem>
+      <IonLabel><IonLabel>{{categoria.descricao}}</IonLabel></IonLabel>
+    </IonItem>
+  </IonList>
+
+</ion-content>

@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Adicionar novo livro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="recipeForm" (ngSubmit)="submitForm()">
+    <ion-input type="hiddem" formControlName="id" style="display: none;"></ion-input>
+      <ion-row style=" padding:10%">
+        <ion-col size="12">
+          <ion-label color="primary">Nome Autor</ion-label>
+          <ion-input formControlName="nome_autor" color="primary" class="filds-form" placeholder="Nome Autor"></ion-input>
+        </ion-col> 
+        <ion-col size="12">
+          <ion-label color="primary">Titulo</ion-label>
+          <ion-input formControlName="titulo" color="primary" class="filds-form" placeholder="Titulo"></ion-input>
+        </ion-col>   
+        <ion-col size="12">
+          <ion-label color="primary">Texto</ion-label>
+          <ion-input formControlName="texto" color="primary" class="filds-form" placeholder="texto"></ion-input>
+        </ion-col>       
+        <ion-col size="12">
+          <ion-label color="primary">Categoria (id)</ion-label>
+          <ion-input formControlName="categoria_id" color="primary" class="filds-form" placeholder="Categoria"></ion-input>
+        </ion-col>       
+          <ion-col size="12">
+            <ion-button type="submit" color="primary" expand="block"> Gravar </ion-button>
+          </ion-col>
+      </ion-row>
+  </form>
+</ion-content>

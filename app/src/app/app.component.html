@@ -3,8 +3,8 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>Biclioteca</ion-list-header>
-          <ion-note>Usuario</ion-note>
+          <ion-list-header>Bookstore</ion-list-header>
+          <ion-note>Bookstore-app</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
@@ -13,6 +13,8 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+
+
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

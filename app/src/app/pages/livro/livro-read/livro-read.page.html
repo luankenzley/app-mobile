@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-title>Lista de Livros</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list color="success">
+      <ion-item  *ngFor="let livro of livros" color="success">
+        <ion-label>
+          <h1>{{livro.titulo}}</h1> 
+          <p>{{livro.nome_autor}}</p>
+          <p>{{livro.texto}}</p>
+        </ion-label>
+        <ion-item color="success">
+          <ion-icon routerLink="/livro-update/{{livro.id}}" name="create-outline"></ion-icon>
+          <ion-icon (click)="deleteLivro(livro.id)" name="close-circle-outline"></ion-icon>
+        </ion-item>
+      </ion-item>
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="success">
+          <ion-fab-button color="success">
+            <ion-icon (click)="create()" name="add"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>
